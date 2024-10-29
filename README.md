@@ -23,6 +23,8 @@ All resources from the game are in folder <a href="./src/">src</a>.
 ### Solutions
 My soluditons are presented in the <a href="./test">test</a> folder.
 
+<strong>NOTE:</strong> Some solidity compiler versions are old by default like "^0.6.0" in order to make the exploits working.
+
 ## Usage
 ```shell
 git clone https://github.com/GeorgiKostadinovPro/Ethernaut

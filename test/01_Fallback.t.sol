@@ -13,7 +13,7 @@ contract FallbackTest is Test {
         fallBack = new Fallback();
     }
 
-    function testExploitVulnerabilty() public {
+    function test_FallbackExploitVulnerability() public {
         address attacker = makeAddr("attacker");
         vm.deal(attacker, 1 ether);
 
@@ -23,7 +23,11 @@ contract FallbackTest is Test {
         fallBack.withdraw();
         vm.stopPrank();
 
-        assertEq(fallBack.owner(), attacker);
-        assertEq(0, address(fallBack).balance);
+        assertEq(fallBack.owner(), attacker, "Attacker should be the owner");
+        assertEq(
+            0,
+            address(fallBack).balance,
+            "Balance must be zero after malicious attack"
+        );
     }
 }

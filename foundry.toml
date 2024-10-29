@@ -2,5 +2,10 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+compiler_version = "^0.8.0"
+remappings = ["openzeppelin-contracts/=lib/openzeppelin-contracts/"]
+
+[profile.default.overrides]
+"src/02_Fallout.sol" = { version = "0.6.12" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

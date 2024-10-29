@@ -12,7 +12,7 @@ contract InstanceTest is Test {
         instance = new Instance(PASSWORD);
     }
 
-    function testAuthenticateWithPassword() public {
+    function test_AuthenticateWithPassword() public {
         string memory passkey = instance.password();
         instance.authenticate(passkey);
 
