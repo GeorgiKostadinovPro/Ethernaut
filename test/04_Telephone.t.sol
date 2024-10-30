@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {Telephone} from "../src/contracts/04_Telephone.sol";
 import {TelephoneAttacker} from "../src/attackers/04_TelephoneAttacker.sol";
 
-contract CoinFlipTest is Test {
+contract TelephoneTest is Test {
     address private owner = makeAddr("owner");
 
     Telephone private telephone;
