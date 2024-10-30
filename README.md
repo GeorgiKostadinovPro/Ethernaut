@@ -12,10 +12,8 @@ The game is created by <a href="https://www.openzeppelin.com/">OpenZeppelin</a>
 1. I have copied the source code of the contract I need to hack.
 2. Deployed it locally on Anvil (local ethereum node).
 3. Read the task description and tried to break the code.
-4. Write test to exploit the contract and ensured the test passes.
+4. Wrote tests and attacker contracts to exploit the original contract and ensured the test passes.
 5. Then, did the same in the game browser console to submit the challenge.
-
-I have solved all challenges in the browser console with Sepolia Test ETH and Metamask Signing.
 
 ### Contracts
 All resources from the game are in folder <a href="./src/">src</a>.

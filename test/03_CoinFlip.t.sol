@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.2 <0.9.0;
+pragma solidity ^0.8.0;
 
 import {Test, console} from "forge-std/Test.sol";
 import {CoinFlip} from "../src/contracts/03_CoinFlip.sol";
