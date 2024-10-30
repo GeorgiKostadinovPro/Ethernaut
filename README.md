@@ -12,7 +12,7 @@ The game acts both as a tool for those interested in learning Ethereum, and as a
 The game is created by <a href="https://www.openzeppelin.com/">OpenZeppelin</a>
 
 ### Contracts
-All resources from the game are in folder <a href="./src/">src</a>.
+All resources from the game are in folder <a href="./src/contracts">contracts</a>.
 
 ### Solutions
 My soluditons are presented in the <a href="./src/attackers/">attackers</a> and <a href="./test">test</a> folders.
@@ -21,6 +21,12 @@ My soluditons are presented in the <a href="./src/attackers/">attackers</a> and 
 
 <strong>NOTE:</strong> Some solidity compiler versions are old by default like "^0.6.0" in order to make the exploits working.
 
+<strong>NOTE:</strong> Take in mind that the challenges are done online and the attacker contracts and interactions are via Metamask on Sepolia Testnet with Sepolia Test ETH.
+
+The tests are only for displaying how to interact with the contracts on local ethereum node WITHOUT any ETH and gas prices envolved.
+
+If you solve the challenges online you have to get some Test Sepolia ETH from a Faucet in order to pay for the gas fees and send ETH when needed.
+ 
 ## Usage
 ```shell
 git clone https://github.com/GeorgiKostadinovPro/Ethernaut
