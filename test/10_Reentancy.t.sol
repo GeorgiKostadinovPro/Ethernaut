@@ -2,8 +2,8 @@
 pragma solidity >=0.6.2 <0.9.0;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Reentrance} from "../src/contracts/10_Re-entrancy.sol";
-import {ReentranceAttacker} from "../src/attackers/10_Re-entrancyAttacker.sol";
+import {Reentrance} from "../src/contracts/10_Reentrancy.sol";
+import {ReentranceAttacker} from "../src/attackers/10_ReentrancyAttacker.sol";
 
 contract ReentranceTest is Test {
     address private owner = makeAddr("owner");

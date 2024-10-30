@@ -8,8 +8,8 @@ remappings = ["openzeppelin-contracts/=lib/openzeppelin-contracts/"]
 [profile.default.overrides]
 "src/contracts/02_Fallout.sol" = { version = "0.6.12" }
 "src/contracts/05_Token.sol" = { version = "0.6.12" }
-"src/contracts/05_Re-entrancy.sol" = { version = "0.6.12" }
+"src/contracts/05_Reentrancy.sol" = { version = "0.6.12" }
 "src/attackers/05_TokenAttacker.sol" = { version = "0.6.12" }
-"src/attackers/10_Re-entrancyAttacker.sol" = { version = "0.6.12" }
+"src/attackers/10_ReentrancyAttacker.sol" = { version = "0.6.12" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
