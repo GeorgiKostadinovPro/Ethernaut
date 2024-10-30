@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Fallback} from "../src/01_Fallback.sol";
+import {Fallback} from "../src/contracts/01_Fallback.sol";
 
 contract FallbackTest is Test {
     address private owner = makeAddr("owner");

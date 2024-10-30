@@ -2,7 +2,7 @@
 pragma solidity >=0.6.2 <0.9.0;
 
 import {Test, console} from "forge-std/Test.sol";
-import {Fallout} from "../src/02_Fallout.sol";
+import {Fallout} from "../src/contracts/02_Fallout.sol";
 
 contract FalloutTest is Test {
     address private owner = makeAddr("owner");
