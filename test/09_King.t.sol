@@ -30,8 +30,6 @@ contract KingTest is Test {
         vm.expectRevert();
         (bool success, ) = payable(king).call{value: 10 ether}("");
 
-        if (success) {
-            assertEq(king._king(), address(kingAttacker));
-        }
+        assertEq(king._king(), address(kingAttacker));
     }
 }
