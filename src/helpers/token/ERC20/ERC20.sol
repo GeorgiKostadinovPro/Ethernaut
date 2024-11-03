@@ -163,6 +163,7 @@ contract ERC20 is Context, IERC20 {
         _transfer(sender, recipient, amount);
 
         uint256 currentAllowance = _allowances[sender][_msgSender()];
+
         require(
             currentAllowance >= amount,
             "ERC20: transfer amount exceeds allowance"
