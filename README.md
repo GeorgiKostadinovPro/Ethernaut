@@ -1,5 +1,5 @@
 ## Ethernaut
-My soluditons to the famous Ethernaut Challenges CTF.
+My solutions to the famous Ethernaut Challenges CTF.
 
 ## What is CTFs
 CTFs (Capture The Flags / War games) are security challenges where vulnerable code is presented and you need to write a smart contract to exploit the vulnerability.
