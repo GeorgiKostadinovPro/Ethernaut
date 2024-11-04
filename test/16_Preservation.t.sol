@@ -33,8 +33,7 @@ contract PreservationTest is Test {
             uint256(uint160(address(preservationAttacker)))
         );
 
-        // Step 2: Call setFirstTime again with your own address to take ownership
-        // Passing `address(this)` here to claim ownership for this test contract
+        // Call setFirstTime again with your own address to take ownership
         preservation.setFirstTime(uint256(uint160(attacker)));
 
         assertEq(preservation.owner(), attacker);
