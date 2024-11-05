@@ -15,8 +15,8 @@ contract DexTest is Test {
         vm.startPrank(owner);
 
         dex = new Dex();
-        token1 = new SwappableToken(address(dex), "Token 1", "TK1", 200);
-        token2 = new SwappableToken(address(dex), "Token 2", "TK2", 200);
+        token1 = new SwappableToken(address(dex), "Token 1", "TK1", 110);
+        token2 = new SwappableToken(address(dex), "Token 2", "TK2", 110);
 
         dex.setTokens(address(token1), address(token2));
 
@@ -26,8 +26,8 @@ contract DexTest is Test {
         dex.addLiquidity(address(token1), 100);
         dex.addLiquidity(address(token2), 100);
 
-        token1.transfer(attacker, 100);
-        token2.transfer(attacker, 100);
+        token1.transfer(attacker, 10);
+        token2.transfer(attacker, 10);
 
         vm.stopPrank();
     }
@@ -39,7 +39,7 @@ contract DexTest is Test {
         // Here is how I played it out
         /*
             ATTACKER                        DEX
-            T1 - 10                       	t1 - 100
+            t1 - 10                       	t1 - 100
             t2 - 10 			            t2 - 100
 
             1. swap 10 t1 for t2 		    DEX
