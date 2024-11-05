@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {Shop} from "../src/contracts/21_Shop.sol";
 import {ShopAttacker} from "../src/attackers/21_ShopAttacker.sol";
 
-contract DenialTest is Test {
+contract ShopTest is Test {
     address private owner = makeAddr("owner");
     Shop private shop;
     ShopAttacker private shopAttacker;
