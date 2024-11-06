@@ -11,6 +11,13 @@ The game acts both as a tool for those interested in learning Ethereum, and as a
 
 The game is created by <a href="https://www.openzeppelin.com/">OpenZeppelin</a>
 
+### Tech stack
+<p>
+  <img alt="Static Badge" src="https://img.shields.io/badge/Solidity-%E2%9C%93-black">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Foundry-%E2%9C%93-%23C21325">
+  <img alt="Static Badge" src="https://img.shields.io/badge/OpenZeppelin@v4.0.0-%E2%9C%93-blue">
+</p>
+
 ### Contracts
 All resources from the game are in folder <a href="./src/contracts">contracts</a>.
 
@@ -20,6 +27,8 @@ My soluditons are presented in the <a href="./src/attackers/">attackers</a> and 
 <strong>NOTE:</strong> Some challenges require to create an attacker contract, some may not need such contract.
 
 <strong>NOTE:</strong> Some solidity compiler versions are old by default like "^0.6.0" in order to make the exploits working.
+
+<strong>NOTE:</strong> Dependencies for contracts that use solidity < v.0.8.0 use dependencies from the <a href="./src/helpers">helpers</a>.
 
 <strong>NOTE:</strong> Take in mind that the challenges are done online and the attacker contracts and interactions are via Metamask on Sepolia Testnet with Sepolia Test ETH.
 
