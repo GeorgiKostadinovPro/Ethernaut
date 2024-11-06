@@ -34,7 +34,7 @@ contract DexTwoTest is Test {
 
     function test_DexTwoExploitVulnerability() public {
         // This challenge is even easier. We can drain both token1 and token2 pools
-        // The vulnerability is that DexTwo spaw function misses the checks for whitelisted token1 and token1
+        // The vulnerability is that DexTwo swap function misses the checks for whitelisted token1 and token1
         // Without checking if the tokens are valid, a user can just use arbitrary fake token1 and token2 to exhange for real token1 and token2
         vm.startPrank(attacker);
         SwappableTokenTwo fakeToken1 = new SwappableTokenTwo(
