@@ -2,9 +2,9 @@
 pragma solidity ^0.8.0;
 pragma experimental ABIEncoderV2;
 
-import {ERC1967Proxy} from "openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol";
+import {UpgradeableProxy} from "../helpers/proxy/UpgradeableProxy.sol";
 
-contract PuzzleProxy is ERC1967Proxy {
+contract PuzzleProxy is UpgradeableProxy {
     address public pendingAdmin;
     address public admin;
 
@@ -12,7 +12,7 @@ contract PuzzleProxy is ERC1967Proxy {
         address _admin,
         address _implementation,
         bytes memory _initData
-    ) ERC1967Proxy(_implementation, _initData) {
+    ) UpgradeableProxy(_implementation, _initData) {
         admin = _admin;
     }
 
