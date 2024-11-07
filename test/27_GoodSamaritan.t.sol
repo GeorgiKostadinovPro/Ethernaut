@@ -5,7 +5,7 @@ import {Test, console} from "forge-std/Test.sol";
 import {GoodSamaritan} from "../src/contracts/27_GoodSamaritan.sol";
 import {GoodSamaritanAttacker} from "../src/attackers/27_GoodSamaritanAttacker.sol";
 
-contract DoubleEntryPointTest is Test {
+contract GoodSamaritanTest is Test {
     address private owner = makeAddr("owner");
     address private attacker = makeAddr("attacker");
     GoodSamaritan private goodSamaritan;
