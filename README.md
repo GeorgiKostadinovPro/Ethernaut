@@ -42,6 +42,27 @@ git clone https://github.com/GeorgiKostadinovPro/Ethernaut
 make
 ```
 
+Now the project will not build because certain tests use v0.8.0 and other use older v < 0.8.0.
+This is ok because certain contracts use v0.8.0 to exploit specific vulnerabilities which are no longer valid in v >= 0.8.0.
+To fix the build issue you need to go to the forge-std/Test.sol contract and remove or comment any code that contains StdInvariant.
+```diff
+-import {StdInvariant} from "./StdInvariant.sol";
+```
+Now, you have removed the dependency, so you can remove the StdInvariant.
+```diff
+abstract contract Test is
+    TestBase,
+    StdAssertions,
+    StdChains,
+-   StdInvariant,
+    StdCheats ,
+    StdUtils
+{
+    // Note: IS_TEST() must return true.
+    bool public IS_TEST = true;
+}
+```
+
 Build project
 ```shell
 make build
