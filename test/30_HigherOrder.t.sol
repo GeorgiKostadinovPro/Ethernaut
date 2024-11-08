@@ -4,7 +4,7 @@ pragma solidity >=0.6.2 <0.9.0;
 import {Test, console} from "forge-std/Test.sol";
 import {HigherOrder} from "../src/contracts/30_HigherOrder.sol";
 
-contract SwitchTest is Test {
+contract HigherOrderTest is Test {
     address private owner = makeAddr("owner");
     address private attacker = makeAddr("attacker");
     HigherOrder private higherOrder;
