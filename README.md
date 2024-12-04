@@ -43,7 +43,7 @@ make
 ```
 
 Now the project will not build because certain tests use v0.8.0 and other use older v < 0.8.0.
-This is ok because certain contracts use v0.8.0 to exploit specific vulnerabilities which are no longer valid in v >= 0.8.0.
+This is ok because certain contracts use < v0.8.0 to exploit specific vulnerabilities which are no longer valid in v >= 0.8.0.
 To fix the build issue you need to go to the forge-std/Test.sol contract and remove or comment any code that contains StdInvariant.
 ```diff
 -import {StdInvariant} from "./StdInvariant.sol";

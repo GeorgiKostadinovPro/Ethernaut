@@ -16,5 +16,7 @@ remappings = ["openzeppelin-contracts/=lib/openzeppelin-contracts/"]
 "src/contracts/30_HigherOrder.sol" = { version = "0.6.12" }
 "src/helpers/Ownable-05.sol" = { version = "0.5.12" }
 "src/helpers/SafeMath-06.sol" = { version = "0.6.12" }
+"src/helpers/Address-06.sol" = { version = "0.6.12" }
+"src/helpers/proxy/Initializable-06.sol" = { version = "0.6.12" }
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
